@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,4 +13,9 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::resource('ajax-crud', AjaxController::class);
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::resource('products-ajax-crud', ProductController::class);
